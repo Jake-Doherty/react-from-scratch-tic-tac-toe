@@ -1,0 +1,39 @@
+.board {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+  background-color: black;
+  height: 500px;
+  width: 500px;
+  border-radius: 10px;
+  margin: auto;
+  align-content: center;
+  justify-content: center;
+}
+
+.board-cell {
+  scale: 1;
+  background-color: rgb(92, 92, 92);
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+}
+
+.board-cell:hover {
+  scale: 1.05;
+  background-color: blue;
+  transition: all 200ms ease-in-out;
+}
+
+.board-cell:hover {
+  rotate: 360deg;
+  transition: all 500ms ease-in-out;
+}
+
+.board-cell:active {
+  scale: 0.95;
+  background-color: rgb(255, 238, 0);
+  transition: all 250ms ease-in-out;
+}
