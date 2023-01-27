@@ -7,7 +7,7 @@ const GameContext = createContext();
 const GameProvider = ({ children }) => {
   const [board, setBoard] = useState(['', '', '', '', '', '', '', '', '']);
   const [currentPlayer, setCurrentPlayer] = useState('X');
-  const [gameMessage, setGameMessage] = useState('Click a tile to start!');
+  const [gameMessage, setGameMessage] = useState('Click a box to start!');
   const [active, setActive] = useState(true);
 
   // const { checkWinner, isTie } = useCheckResults();
@@ -34,7 +34,7 @@ const GameProvider = ({ children }) => {
       setGameMessage(`${winner} has won!`);
       setActive(false);
     } else if (isTie()) {
-      setGameMessage('It is a tie!');
+      setGameMessage(`It's a tie!`);
       setActive(false);
     }
   };
