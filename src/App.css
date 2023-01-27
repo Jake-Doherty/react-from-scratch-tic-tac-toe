@@ -1,5 +1,9 @@
 .App {
+  display: grid;
+  grid-template-rows: 1fr 1fr 14fr;
   text-align: center;
+  height: 100vh;
+  background-color: #282c34;
 }
 
 .App-logo {
