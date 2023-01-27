@@ -3,7 +3,7 @@ const { createContext, useState } = require('react');
 const GameContext = createContext();
 
 const GameProvider = ({ children }) => {
-  const [board, setBoard] = useState(['X', 'X', 'X', 'O', '', '', '', '', '']);
+  const [board, setBoard] = useState(['', '', '', '', '', '', '', '', '']);
   const [currentPlayer, setCurrentPlayer] = useState('X');
   const [gameMessage, setGameMessage] = useState('Click a tile to start!');
   const [active, setActive] = useState(true);
