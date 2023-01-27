@@ -1,0 +1,31 @@
+.status-bar {
+  height: 200px;
+}
+
+.player-turn {
+  margin: 0;
+}
+
+.status-bar-message {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.game-result::first-letter {
+  font-size: 2em;
+}
+
+.reset-button {
+  margin-bottom: 30px;
+}
+
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  color: yellow;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
