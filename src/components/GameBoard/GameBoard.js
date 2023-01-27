@@ -5,7 +5,9 @@ import './GameBoard.css';
 
 export default function GameBoard() {
   const { board } = useContext(GameContext);
-  console.log('board log', board);
+
+  // console.log('board log', board);
+
   return (
     <div className="board">
       {board.map((box, index) => (
@@ -13,8 +15,4 @@ export default function GameBoard() {
       ))}
     </div>
   );
-}
-
-{
-  /* <div className="board-cell"></div> */
 }
