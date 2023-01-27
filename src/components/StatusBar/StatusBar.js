@@ -2,11 +2,13 @@ import React, { useContext } from 'react';
 import { GameContext } from '../../context/GameContext.js';
 
 export default function StatusBar() {
-  const { currentPlayer, gameMessage, setBoard, active, setActive } = useContext(GameContext);
+  const { currentPlayer, gameMessage, setBoard, active, setActive, setCurrentPlayer } =
+    useContext(GameContext);
 
   const handleGameReset = () => {
     setBoard(['', '', '', '', '', '', '', '', '']);
     setActive(true);
+    setCurrentPlayer('X');
   };
 
   if (active)
