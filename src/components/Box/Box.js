@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { GameContext } from '../../context/GameContext.js';
+import './Box.css';
 
 export default function Box({ box, index }) {
   const { active, board, setBoard, currentPlayer, setCurrentPlayer, setGameMessage } =
@@ -17,9 +18,15 @@ export default function Box({ box, index }) {
     setCurrentPlayer(currentPlayer === 'X' ? 'O' : 'X');
   }
 
+  const playerMarkerStyle = {
+    color: box === 'X' ? 'red' : 'green',
+  };
+
   return (
     <div className="board-cell" onClick={handleChoice}>
-      {box}
+      <span style={playerMarkerStyle} className="player-marker">
+        {box}
+      </span>
     </div>
   );
 }
