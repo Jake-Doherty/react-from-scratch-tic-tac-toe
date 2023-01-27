@@ -12,6 +12,19 @@ const GameProvider = ({ children }) => {
 
   // const { checkWinner, isTie } = useCheckResults();
 
+  const handleChoice = (box, index) => {
+    if (!active) return;
+    if (box !== '') {
+      setGameMessage('This box is already taken!');
+      return;
+    }
+    setGameMessage('Who will win?');
+    box = currentPlayer;
+    board[index] = box;
+    setBoard([...board]);
+    setCurrentPlayer(currentPlayer === 'X' ? 'O' : 'X');
+  };
+
   const checkWinner = () => {
     if (board[0] === board[1] && board[0] === board[2] && board[0] !== '') return board[0];
     if (board[3] === board[4] && board[3] === board[5] && board[3] !== '') return board[3];
@@ -52,6 +65,7 @@ const GameProvider = ({ children }) => {
         setGameMessage,
         active,
         setActive,
+        handleChoice,
       }}
     >
       {children}
