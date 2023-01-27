@@ -9,6 +9,7 @@ const GameProvider = ({ children }) => {
   const [currentPlayer, setCurrentPlayer] = useState('X');
   const [gameMessage, setGameMessage] = useState('Click a tile to start!');
   const [active, setActive] = useState(true);
+
   // const { checkWinner, isTie } = useCheckResults();
 
   const checkWinner = () => {

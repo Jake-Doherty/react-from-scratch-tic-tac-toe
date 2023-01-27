@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { GameContext } from '../../context/GameContext.js';
 
 export default function Box({ box, index }) {
-  // console.log('box props', { box });
   const { active, board, setBoard, currentPlayer, setCurrentPlayer, setGameMessage } =
     useContext(GameContext);
 
